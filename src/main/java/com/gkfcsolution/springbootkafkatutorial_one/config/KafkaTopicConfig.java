@@ -22,4 +22,10 @@ public class KafkaTopicConfig {
         return TopicBuilder.name("${spring.kafka.topic.name}")
                 .build();
     }
+
+    @Bean
+    public NewTopic gkfcsolutionJsonTopic(){
+        return TopicBuilder.name("${spring.kafka.topic.name.json}")
+                .build();
+    }
 }
